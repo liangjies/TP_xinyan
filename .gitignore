@@ -1,4 +1,3 @@
-.idea
-composer.lock
-*.log
-thinkphp
+*.js linguist-language=PHP
+*.css linguist-language=PHP
+*.html linguist-language=PHP
