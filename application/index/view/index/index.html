@@ -1,0 +1,57 @@
+{include file="index@master/header" /}
+<div class="container-wrap">
+    <div class="container">
+        <div class="layui-fluid">
+            <div class="layui-row">
+                <div class="layui-row layui-col-space20">
+                    <div class="layui-col-sm8">
+                        <div class="layui-card">
+                            <div class="layui-card-header">
+                                最近更新
+                            </div>
+                            <div class="layui-card-body">
+                                {foreach name="contents" item="vo"}
+                                <div class="item"><div class="item-box  layer-photos-demo1 layer-photos-demo"><h3><a href = "{:url('mshow',array('id'=>$vo['M_ID']))}" >{$vo.M_Title}</a></h3><span class="layui-badge layui-bg-blue ">{$vo.M_Label}</span><h5>发布于：<span>{$vo.M_Time}</span></h5></div></div>
+                                {/foreach}
+                                <!--
+                                <div class="item">
+                                    <div class="item-box  layer-photos-demo1 layer-photos-demo">
+                                        <h3><a href="details.html">拥有诗意的心态,才能拥有诗意的生活</a></h3>
+                                        <h5>发布于：<span>刚刚</span></h5>
+                                    </div>
+                                </div>
+                                !-->
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="layui-col-sm4">
+                        <div class="layui-card">
+                            <div class="layui-card-header">随机推荐</div>
+                            <div class="layui-card-body">
+                                {foreach name="random" item="vo"}
+                                <div class=""><div class="item-box layer-photos-demo1 layer-photos-demo" style="font-size:12px"><p><a href = "{:url('mshow',array('id'=>$vo['M_ID']))}" >{$vo.M_Title}</a></p></div></div>
+                                {/foreach}
+                                <!--
+                               <div class="item">
+                                   <div class="item-box  layer-photos-demo1 layer-photos-demo" style="font-size:12px">
+                                       <p><a href="details.html">拥有诗意的心态,才能拥有诗意的生活</a></p>
+                                   </div>
+                               </div>
+                                !-->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="item-btn">
+
+            <!--
+            <button class="layui-btn layui-btn-normal">上一页</button>
+            <button class="layui-btn layui-btn-normal">下一页</button>
+            !-->
+        </div>
+    </div>
+</div>
+{include file="index@master/footer" /}
